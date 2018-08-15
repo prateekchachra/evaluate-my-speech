@@ -1,10 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+from .models import SpeechPost
 
-import random
-
+latest_posts = SpeechPost.objects.order_by('-pub_date')[:3]
 
 def index(request):
-    return HttpResponse('Hello everyone');
-# Create your views here.
+    context = {
+        'latest_posts' : latest_posts[:3],
+    }
+    return render(request, 'home/index.html', context)
+
+
+def eval_guide(request):
+    return render(request, 'home/eval_guide.html')
+
+def public_posts(request):
+    context = {
+        'latest_posts' : latest_posts,
+    }
+    return render(request, 'home/public_posts.html', context)

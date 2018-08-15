@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>TechTalks</title>
+    <meta name="description" content="TechTalks" />
+    <meta name="keywords" content="Tech talk community where we are try to cover all technical talk related to Devs, devops, design, android, iOS , digital marketing, security. Inshort try to cover all technology part!" />
+    {% load static %}
+    <!--  FAVICON AND TOUCH ICONS -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'root/img/favicon.ico' %}" />  <!-- this icon shows in browser toolbar -->
+    <link rel="icon" type="image/x-icon" href="{% static 'root/img/favicon.ico' %}" /> <!-- this icon shows in browser toolbar -->
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'root/libs/bootstrap/css/bootstrap.min.css' %}" media="all" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{% static 'root/libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700%7CLato:300,400,700"/>
+
+
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="{% static 'root/libs/owlcarousel/owl.carousel.min.css' %}" media="all" />
+    <link rel="stylesheet" href="{% static 'root/libs/owlcarousel/owl.theme.default.min.css' %}" media="all" />
+
+
+    <!-- POPUP-->
+    <link rel="stylesheet" href="{% static 'root/libs/maginificpopup/magnific-popup.css' %}" media="all"/>
+
+
+    <!-- MASTER  STYLESHEET  -->
+    <link id="csi-master-style" rel="stylesheet" href="{% static 'root/css/style-default.min.css' %}" media="all" />
+    {% block stylecontent %}
+    {% endblock %}
+    <!-- MODERNIZER CSS  -->
+    <script src="{% static 'root/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+
+<header>
+    <div id="csi-header" class="csi-header csi-banner-header">
+        <div class="csi-header-bottom menu-onscroll" style="z-index:100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                      <nav class="navbar navbar-default csi-navbar">
+                            <div class="csicontainer">
+                             <div class="navbar-header">
+                                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                                        <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                    <div class="navbar-brand">
+                                        <a href="/index">
+                                          <!--<img src="{% static 'root/img/logo.jpg' %}" alt="Logo" style="width:140px;height:100px;"/>-->
+                                          <h2  style="color: white; font-family: 'Megrim', cursive; font-weight:bold;">TechTalks</h2>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="collapse navbar-collapse" id="main-navbar" style="margin:10px">
+                                    <ul class="nav navbar-nav csi-nav" >
+                                      <li><a href="/index">Home</a></li>
+                                      <li><a href="/about">About Us</a></li>
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meetup<span class="caret"></span></a>
+                                          <ul class="dropdown-menu">
+                                              <li><a href="/upcomingmeetups">Upcoming Meetups</a></li>
+                                              <li><a href="/pastmeetups">Past Meetups</a></li>
+                                          </ul>
+                                      </li>
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
+                                          <ul class="dropdown-menu">
+                                              <li><a href="/sponsors">Sponsors</a></li>
+                                              <li><a href="/communitypartners">Community Partners</a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="/contact">Contact Us</a></li>
+                                      <!--<li><a href="/blog">Blog</a></li>-->
+                                    </ul>
+                                <!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!--//.ROW-->
+            </div>
+            <!-- //.CONTAINER -->
+        </div>
+        <!-- //.INNER-->
+    </div>
+</header>

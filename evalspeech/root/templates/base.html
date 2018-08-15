@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>TechTalks</title>
+    <meta name="description" content="TechTalks" />
+    <meta name="keywords" content="Tech talk community where we are try to cover all technical talk related to Devs, devops, design, android, iOS , digital marketing, security. Inshort try to cover all technology part!" />
+    {% load static %}
+    <!--  FAVICON AND TOUCH ICONS -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'root/img/favicon.ico' %}" />  <!-- this icon shows in browser toolbar -->
+    <link rel="icon" type="image/x-icon" href="{% static 'root/img/favicon.ico' %}" /> <!-- this icon shows in browser toolbar -->
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{% static 'root/libs/bootstrap/css/bootstrap.min.css' %}" media="all" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{% static 'root/libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700%7CLato:300,400,700"/>
+
+
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="{% static 'root/libs/owlcarousel/owl.carousel.min.css' %}" media="all" />
+    <link rel="stylesheet" href="{% static 'root/libs/owlcarousel/owl.theme.default.min.css' %}" media="all" />
+
+
+    <!-- POPUP-->
+    <link rel="stylesheet" href="{% static 'root/libs/maginificpopup/magnific-popup.css' %}" media="all"/>
+
+
+    <!-- MASTER  STYLESHEET  -->
+    <link id="csi-master-style" rel="stylesheet" href="{% static 'root/css/style-default.min.css' %}" media="all" />
+    {% block stylecontent %}
+    {% endblock %}
+    <!-- MODERNIZER CSS  -->
+    <script src="{% static 'root/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+
+{% include "header.html" %}
+
+{% block bodyclass %}
+{% endblock %}
+
+{% include "footer.html" %}
+
+<script src="{% static 'root/js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+<!-- BOOTSTRAP JS  -->
+<script src="{% static 'root/libs/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+<!-- SKILLS SCRIPT  -->
+<script src="{% static 'root/libs/jquery.validate.js' %}"></script>
+
+<!-- Owl Carousel  -->
+<script src="{% static 'root/libs/owlcarousel/owl.carousel.min.js' %}"></script>
+
+<script src="{% static 'root/libs/jquery.smooth-scroll.min.js' %}"></script>
+<script src="{% static 'root/libs/jquery.easing.min.js' %}"></script>
+
+
+<!-- adding magnific popup js library -->
+<script type="text/javascript" src="{% static 'root/libs/maginificpopup/jquery.magnific-popup.min.js' %}"></script>
+
+<!-- SMOTH SCROLL -->
+<script src="{% static 'root/libs/jquery.smooth-scroll.min.js' %}"></script>
+<script src="{% static 'root/libs/jquery.easing.min.js' %}"></script>
+<script src="{% static 'root/libs/countdown.js' %}"> </script>
+
+
+<!-- CUSTOM SCRIPT  -->
+<script src="{% static 'root/js/custom.script.js' %}"></script>
