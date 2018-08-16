@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class SpeechpostsConfig(AppConfig):
+class PostsConfig(AppConfig):
     name = 'posts'

@@ -1,13 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>TechTalks</title>
-    <meta name="description" content="TechTalks" />
-    <meta name="keywords" content="Tech talk community where we are try to cover all technical talk related to Devs, devops, design, android, iOS , digital marketing, security. Inshort try to cover all technology part!" />
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <meta name="description" content="Evaluate My Speech" />
+    <meta name="keywords" content="Get your speech evaluated by experts, audience and fellow public speakers! For open mic comedy, stand up and poetry too!" />
     {% load static %}
     <!--  FAVICON AND TOUCH ICONS -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'root/img/favicon.ico' %}" />  <!-- this icon shows in browser toolbar -->
@@ -42,10 +46,14 @@
     <script src="{% static 'root/js/vendor/modernizr-2.8.3.min.js' %}"></script>
 
 </head>
+{% block bodyclass %}
+{% endblock %}
 
 {% include "header.html" %}
 
-{% block bodyclass %}
+{% block bodycontent %}
+{% block customscripts %}
+{% endblock %}
 {% endblock %}
 
 {% include "footer.html" %}

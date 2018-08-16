@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block bodyclass %}
+<body class="edit_details">
+<div class="csi-container">
+{% endblock %} {% block bodycontent %}
+    <form method="post">
+        <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Edit Details</button>
+    </div>
+    </form>
+
+
+</div>
+{% endblock %}
