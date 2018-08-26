@@ -14,7 +14,7 @@
                                         <span class="icon-bar"></span>
                                         </button>
                                     <div class="navbar-brand">
-                                        <a href="/index">
+                                        <a href="/">
                                           <h2  style="color: white; font-family: 'Megrim', cursive; font-weight:bold;">Evaluate My Speech</h2>
                                         </a>
                                     </div>
@@ -22,25 +22,30 @@
                                 <div class="collapse navbar-collapse" id="main-navbar" style="margin:10px">
                                     <ul class="nav navbar-nav csi-nav" >
                                       <li><a href="/">Home</a></li>
-                                      <li><a href="/about">About Us</a></li>
-                                      <li class="dropdown">
-                                          <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meetup<span class="caret"></span></a>
+                                           <li><a href="/recommended">Recommended For You</a></li>
+                                      <li><a href="/posts/latest">Latest Posts</a></li>
+                                        <li><a href="/events">Upcoming Events</a></li>
+                                        <li><a href="/accounts/near_me">Speakers Around You</a></li>
+
+
+
+                                          {% if user.get_username.strip %}
+                                        <li class="dropdown">
+                                           <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.get_username }}<span class="caret"></span></a>
                                           <ul class="dropdown-menu">
-                                              <li><a href="accounts/login">Login</a></li>
-                                              <li><a href="/pastmeetups">Past Meetups</a></li>
+                                              <li><a href="/accounts/my_account">My Account</a></li>
+                                              <li><a href="/accounts/edit_details">Edit Profile</a></li>
+                                              <li><a href="/accounts/logout">Logout</a></li>
                                           </ul>
-                                      </li>
-                                      <li class="dropdown">
-                                          <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
-                                          <ul class="dropdown-menu">
-                                              <li><a href="/sponsors">Sponsors</a></li>
-                                              <li><a href="/my_account">My Account</a></li>
-                                          </ul>
-                                      </li>
-                                      <li><a href="/contact">Contact Us</a></li>
-                                      <!--<li><a href="/blog">Blog</a></li>-->
+                                        </li>
+                                          {% else %}
+                                            <li><a href="/accounts/login">Login</a></li>
+
+                                             {% endif %}
+
                                     </ul>
                                 <!--/.nav-collapse -->
+                                     </div>
                             </div>
                         </nav>
                     </div>

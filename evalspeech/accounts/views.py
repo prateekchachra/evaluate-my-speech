@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout as auth_logout
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import RegistrationForm, EditProfileForm
@@ -9,8 +11,12 @@ def login_view(request):
     return render(request, 'registration/login.html')
 
 
-def logout_view(request):
-    return render(request, 'registration/logout.html')
+def logout_redirect(request):
+    logged_in_user = ''
+    if(request.user) :
+        messages.add_message(request, messages.INFO, request.user.username)
+    auth_logout(request)
+    return redirect('/')
 
 def register_view(request):
     if request.method == 'POST':
@@ -59,3 +65,5 @@ def edit_details_view(request):
         return render(request, 'account_settings/edit_details.html', context)
 
 
+def people_near_me_view(request):
+    return render(request, 'people/near_me.html')

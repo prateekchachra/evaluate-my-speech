@@ -134,6 +134,7 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/?loggedOut=true'
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025

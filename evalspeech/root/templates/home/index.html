@@ -4,6 +4,12 @@
   <div class="csi-container ">
 {% endblock %}{% block bodycontent %}
       #TODO : Main page body
+    {% if logged_out_user %}
+    <section>
+      <h1> You have successfully logged out, {{ logged_out_user }}!</h1>
+
+    </section>
+    {% endif %}
  <section>
       <div class="csi-slider">
         <div class="csi-banner-style">
@@ -25,9 +31,7 @@
                             <div class="csi-hover-link">
                               <div class="csi-vertical">
                                 <div class="csi-banner-content">
-                                  <h3 class="csi-subtitle">Next Meetup :</h3>
-                                  <h2 class="csi-title">{{ next }}</h2>
-                                  <p class="date">On {{ date }}</p>
+                                  <h3 class="csi-subtitle">Speeches</h3>
                                 </div>
                               </div>
                             </div>
@@ -53,9 +57,7 @@
                             <div class="csi-hover-link">
                               <div class="csi-vertical">
                                 <div class="csi-banner-content">
-                                  <h3 class="csi-subtitle">Next Meetup :</h3>
-                                  <h2 class="csi-title">{{ next }}</h2>
-                                  <p class="date">On {{ date }}</p>
+                                  <h2 class="csi-subtitle">Speeches</h2>
                                 </div>
                               </div>
                             </div>
@@ -69,33 +71,7 @@
               </div>
               <!--SLIDER ITEM 2 End-->
 
-              <!--SLIDER ITEM 3-->
-              <div class="csi-item-common csi-item-right">
-                <div class="col-sm-12g">
-                  <div class="slider-text-single">
-                    <figure>
-                      <img src="{% static 'root/img/slider3.jpg' %}" alt="slider" />
-                      <figcaption>
-                        <div class="figcaption-inner">
-                          <div class="csi-container csi-banner-content">
-                            <div class="csi-hover-link">
-                              <div class="csi-vertical">
-                                <div class="csi-banner-content">
-                                  <h3 class="csi-subtitle">Next Meetup :</h3>
-                                  <h2 class="csi-title">{{ next }}</h2>
-                                  <p class="date">On {{ date }}</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <!--//.col-->
-              </div>
-              <!--SLIDER ITEM 3 End-->
+
             </div>
             <!--//.csi-main-slider-->
             <!-- //.CONTAINER -->

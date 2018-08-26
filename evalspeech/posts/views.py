@@ -2,12 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-import random
-
-
 def posts(request):
-    return HttpResponse('Hello everyone');
+    return render(request, 'post.html')
 
-from django.shortcuts import render
-
-# Create your views here.
+def latest_posts(request):
+    return render(request, 'latest.html')
